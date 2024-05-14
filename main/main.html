@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="es" data-bs-theme="auto">
+
+<head>
+  <script src="../assets/js/color-modes.js"></script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Corte y estoque</title>
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+  <link rel="icon" href="favicon.png" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .b-example-divider {
+      width: 100%;
+      height: 3rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: solid rgba(0, 0, 0, .15);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
+
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
+
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .btn-bd-primary {
+      --bd-violet-bg: #712cf9;
+      --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+      --bs-btn-font-weight: 600;
+      --bs-btn-color: var(--bs-white);
+      --bs-btn-bg: var(--bd-violet-bg);
+      --bs-btn-border-color: var(--bd-violet-bg);
+      --bs-btn-hover-color: var(--bs-white);
+      --bs-btn-hover-bg: #6528e0;
+      --bs-btn-hover-border-color: #6528e0;
+      --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+      --bs-btn-active-color: var(--bs-btn-hover-color);
+      --bs-btn-active-bg: #5a23c8;
+      --bs-btn-active-border-color: #5a23c8;
+    }
+
+    .bd-mode-toggle {
+      z-index: 1500;
+    }
+
+    .bd-mode-toggle .dropdown-menu .active .bi {
+      display: block !important;
+    }
+  </style>
+
+
+  <link href="main.css" rel="stylesheet">
+</head>
+
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol id="check2" viewBox="0 0 16 16">
+      <path
+        d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+    </symbol>
+    <symbol id="circle-half" viewBox="0 0 16 16">
+      <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+    </symbol>
+    <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+      <path
+        d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+      <path
+        d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+    </symbol>
+    <symbol id="sun-fill" viewBox="0 0 16 16">
+      <path
+        d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+    </symbol>
+  </svg>
+
+  <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+    <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
+      aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+      <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
+        <use href="#circle-half"></use>
+      </svg>
+      <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"
+          aria-pressed="false">
+          <svg class="bi me-2 opacity-50" width="1em" height="1em">
+            <use href="#sun-fill"></use>
+          </svg>
+          Light
+          <svg class="bi ms-auto d-none" width="1em" height="1em">
+            <use href="#check2"></use>
+          </svg>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"
+          aria-pressed="false">
+          <svg class="bi me-2 opacity-50" width="1em" height="1em">
+            <use href="#moon-stars-fill"></use>
+          </svg>
+          Dark
+          <svg class="bi ms-auto d-none" width="1em" height="1em">
+            <use href="#check2"></use>
+          </svg>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto"
+          aria-pressed="true">
+          <svg class="bi me-2 opacity-50" width="1em" height="1em">
+            <use href="#circle-half"></use>
+          </svg>
+          Auto
+          <svg class="bi ms-auto d-none" width="1em" height="1em">
+            <use href="#check2"></use>
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <header data-bs-theme="dark">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand fst-italic">Corte y estoque</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/main/main.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/contact/contact.html">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-disabled="true" href="/detail/detail.html">Detalles</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="¿Que buscas?" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active carousel-background">
+          <div class="container">
+            <div class="carousel-caption text-start">
+              <h1>¡No te cortes!</h1>
+              <h4 id="intr" class="opacity-75">La espada es un arma muy icónica y reconocible, sin embargo, los conocimientos que
+                tenemos normalmente de
+                ellas esta muy influenciadas por el cine y la cultura popular mas que por la verdad histórica que
+                realmente hay de ellas.</h4>
+              <p><a class="btn btn-lg btn-primary" href="https://es.wikipedia.org/wiki/Espada">Saber mas...</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container marketing">
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1">La espada clasica de doble filo <span
+              class="text-body-secondary">La mitica "espada medieval"</span></h2>
+          <p class="lead">Aunque tiene muchas variaciones, tanto en forma como en uso, la espada de doble filo medieval
+            era
+            un arma usada principalmente con escudo, apoyando el combate con él.
+            Pero ya fuera en duelos o sin un escudo esta espada se usaba con una mano en el mango y otra en
+            el filo (aunque parece que te puedes hacer daño, con un poco de practica se hace fácil) con esta
+            guardia la espada apoyaba su defensa en ambas manos y su ataque consistía en usarla para clavar
+            la punta en los huecos de la armadura del rival (o simplemente en algún lugar vulnerable) o
+            soltar el mango y agarrar el filo con ambas manos para golpear con la guarda del arma y realizar
+            así un poderoso ataque contundente. La estructura del arma consta de un mango, una guarda cuya
+            función puede ser la defensa de las manos o atrapar el arma enemiga en él y una hoja rígida que
+            consta de 2 filos uno a cada lado que se juntan en una punta.</p>
+        </div>
+        <div class="col-md-5">
+          <img src="favicon.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+            width="300" height="300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+            preserveAspectRatio="xMidYMid slice" focusable="false">
+          <img
+            src="https://3.bp.blogspot.com/_F3KwB8Y3ago/TNLpSh_My-I/AAAAAAAAAG8/_phHImqZgm8/S890-R/talhofferUnarmouredCover_1459.jpg"
+            class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"
+            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+            preserveAspectRatio="xMidYMid slice" focusable="false">
+          <title>Placeholder</title>
+          </svg>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading fw-normal lh-1">Estoque...<span class="text-body-secondary">¡No te vayas! ¡Te
+              prometo que molan!
+            </span></h2>
+          <p class="lead">El estoque posee pequeñas variaciones dependiendo del país de origen y del tipo, pero
+            generalmente consta de un mango para agarrarlo con solo una mano, una cazoleta o recubremanos (que suele ser
+            la
+            característica mas notable y mas variable del arma) que cubre la mano y sirve principalmente
+            para defenderla aunque puede usarse para golpear si el enemigo se acerca mucho (Sobra decir lo ilegal que es
+            en sus versiones deportivas), la defensa
+            consiste en atrapar el arma enemiga o golpear su hoja para cambiar su dirección, y por ultimo
+            una hoja flexible con dos filos poco afilados a comparación de la mortal punta. El estilo de
+            esgrima de esta arma es de la que deriva la esgrima deportiva de hoy en día, consiste en una
+            guardia donde la espada es colocada delante del cuerpo con la punta apuntando al rival, y
+            clavarle la punta es el objetivo principal, realizar cortes con el filo es algo más segundario y
+            la gran mayoría de los cortes se realizan con la punta. Este estilo permite llevar una daga de
+            paradas en la mano no hábil con una finalidad defensiva, pero a la hora de llevar acabo duelos
+            el hecho de sacarla solía representar, no un acto de cobardía, si no mas bien que ves a tu rival
+            como una amenaza.</p>
+        </div>
+        <div class="col-md-5">
+          <img
+            src="https://www.espadasyartedetoledo.com/image/cache/data/productos/art-toledo/espadas-dagas-sables/espadas-historicas/espada-ropera-de-lazo/espada-ropera-de-lazo-cod-ropera-n1-500x500.jpg"
+            class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="300" height="300"
+            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+            preserveAspectRatio="xMidYMid slice" focusable="false">
+          <img src="http://4.bp.blogspot.com/-TYwuEC0wycc/TeEy729p85I/AAAAAAAABHs/UE3-gY-oRgo/s1600/esgrima.jpg"
+            class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"
+            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+            preserveAspectRatio="xMidYMid slice" focusable="false">
+          <title>Placeholder</title>
+          </svg>
+        </div>
+      </div>
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1">Claymores y otros espadones <span
+              class="text-body-secondary">Cuando el tamaño SÍ importa</span></h2>
+          <p class="lead">Las claymores, así como otras espadas similares (como la zweihander, flamígera, mandoble,
+            etc.)
+            son espadas con una estructura similar a las espadas de doble filo, pero con el añadido de ser
+            mas grandes y por ende más pesadas, destacando más en su contundencia que en un filo afilado.
+            Estas espadas nacieron principalmente en los países del norte de Europa, donde se veían con la
+            necesidad de desarrollar un arma capaz de contrarrestar las lanzas
+            (principalmente de los ejércitos españoles que destacaban mucho por sus lanceros. ¿A ver quien es el guapo
+            que para a un español cabreado con un palo largo?) y de la
+            caballería de los enemigos, con esa idea se desarrollaron espadas de tamaños exagerados que se portaban a
+            dos
+            manos con la intención de destrozar las lanzas o tumbar a los caballos de un y poderoso golpe.
+            Podía ser usada sin problemas contra humanos, pero es lenta y pesada de usar lo que dificulta su
+            uso en combate, pero si se llega a golpear a una persona con ellas, será difícil que vuelva a
+            levantarse.</p>
+        </div>
+        <div class="col-md-5">
+          <img src="https://http2.mlstatic.com/espada-claymore-escocesa-D_NQ_NP_834685-MLA26785488715_022018-F.jpg"
+            class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"
+            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+            preserveAspectRatio="xMidYMid slice" focusable="false">
+          <title>Placeholder</title>
+          </svg>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading fw-normal lh-1">Katana <span class="text-body-secondary">El arma tras el
+              mito</span></h2>
+          <p class="lead">La katana es un tipo de sable, es decir, una espada de un solo filo. Es de origen japones y
+            aunque
+            resulta un subtipo, tiene una gran cantidad de curiosidades que comentar y un montón de mitos
+            que desmentir. La katana es una espada que consta de un mango que puede ser agarrado tanto a una
+            como a dos manos, una pequeña división entre ello y el filo (que puede estar decorado) y una
+            hoja fina, rígida y que posee un único y poderoso filo con una ligera curvatura. Un dato no muy
+            conocido de la katana, es que realmente es muy frágil y puede partir o mellar con facilidad, por eso todos
+            los
+            tipos de lucha con los que se usa están centradas en golpes sorpresivos, rápidos y precisos;
+            aunque podía bloquearse con ella, seguía siendo una espada frágil. Las formas en la que se
+            luchan con ella
+            están consideradas artes marciales y son un gran número de estilos, como el kendo u otros
+            clasificados como kenjutsu donde hay un montón de variaciones que van desde centrarse en golpes
+            rápidos tras desenfundar el arma hasta un estilo a dos espadas. Hay variaciones de la katana, como una
+            más pequeña (usada para suicidarse) llamada tanto, una versión recta sin su curvatura,
+            una katana mas corta y recta llamada ninjaco usada, obviamente, por los ninjas y katanas de gran
+            tamaño que se usaban de forma similar a las ya mencionadas claymores.¿Por que tantas variaciones?
+            Los japoneses estan demasiado enamorados de su espada, que era mas valorado como algo simbolico que
+            como arma, todo sea dicho.</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img src="https://www.dragonsports.eu/510632-verylarge_default/katana-acero-laminado.jpg"
+            class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="300" height="300"
+            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+            preserveAspectRatio="xMidYMid slice" focusable="false">
+          <img src="https://media-cdn.tripadvisor.com/media/photo-s/18/a7/cb/c5/2-hour-authentic-kendo.jpg"
+            class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"
+            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+            preserveAspectRatio="xMidYMid slice" focusable="false">
+          <title>Placeholder</title>
+          </svg>
+        </div>
+      </div>
+      <hr class="featurette-divider">
+
+      <div class="row">
+        <h2 class="featurette-heading2 fw-normal lh-1">Divergencias:</h2>
+        <div class="col-lg-4">
+          <img src="http://lh3.ggpht.com/_Zq4ejCmSKbI/SnbHTwdlfFI/AAAAAAAAC7E/fHGPGMUFiX8/s640/PICT0035.JPG"
+            class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+            role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+          <title>Placeholder</title>
+          </svg>
+          <h2 class="fw-normal">Espada de verdugo</h2>
+          <p>Una espada de gran tamaño con una hoja de doble filo muy poderosa que posee una punta cuadrada
+            sin afilar. Esta espada era usada por los verdugos para decapitar a los condenados a muerte,
+            tiene unos agujeros en la punta que podían ser usados para atarle un peso para hacer del arma
+            mas letal como no usarlos para que tenga un mayor efecto sonoro.</p>
+          <p><a class="btn btn-secondary" href="https://es.topwar.ru/187444-mech-palacha.html">Mas información...
+              &raquo;</a></p>
+        </div>
+        <div class="col-lg-4">
+          <img src="http://pm1.narvii.com/6546/5092ff4e794d9c81084539ea807c553d204296b6_00.jpg"
+            class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+            role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+          <title>Placeholder</title>
+          </svg>
+          <h2 class="fw-normal">Shuanggou</h2>
+          <p>Estas extrañas espadas usadas principalmente en las artes marciales, son unas espadas con forma
+            de gancho y una hoja alrededor del mango. La espada esta afilada por ambos lados y su forma
+            sirve para enganchar una hoja a otra y así usarse a modo de látigo.
+          </p>
+          <p><a class="btn btn-secondary"
+              href="https://es.wikipedia.org/wiki/Shuanggou#:~:text=El%20shuanggou%20(en%20chino%20tradicional,en%20Occidente%20como%20espada%20gancho.">Mas
+              información... &raquo;</a></p>
+        </div>
+        <div class="col-lg-4">
+          <img src="https://i.pinimg.com/736x/0f/ac/66/0fac66814dea18d36f1a2acba4a102c3--weird.jpg"
+            class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+            role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+          <title>Placeholder</title>
+          </svg>
+          <h2 class="fw-normal">Urumi</h2>
+          <p> Una espada extremadamente flexible originaria del sur de Asia. La espada se usa exactamente
+            igual que un látigo pero con mas facilidad para cortar, tambien resulta mas peligrosa de usar
+            pues no tiene la misma forma y flexibilidad de un latigo lo que hace mas facil hacerse daño con
+            ella.</p>
+          <p><a class="btn btn-secondary" href="https://es.wikipedia.org/wiki/Urumi_(arma)">Mas información...
+              &raquo;</a></p>
+        </div>
+        <hr class="featurette-divider">
+      </div>
+    </div>
+  </main>
+
+  </div>
+  <footer class="container">
+    <p class="float-end"><a href="#">Vuelta arriba</a></p>
+    <p>&copy; 2017–2024 Paginita Corporation.</p>
+  </footer>
+
+  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

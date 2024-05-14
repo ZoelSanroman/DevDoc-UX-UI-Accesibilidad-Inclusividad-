@@ -1,0 +1,14 @@
+ @import url('https://fonts.googleapis.com/css?family=Slabo+27px&display=swap');
+ @media only screen and (min-width: 341px) {
+     body {
+         background-image: url("https://img.freepik.com/vector-gratis/elegante-fondo-blanco-lineas-brillantes_1017-17580.jpg?size=626&ext=jpg");
+         font-family: 'Slabo 27px', serif;
+         margin: 0px;
+         text-align: center;
+
+     }
+ }
+
+ @media only screen and (max-width: 340px) {
+    
+ }
