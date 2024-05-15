@@ -25,10 +25,11 @@ body {
 }
 
 .carousel-caption {
+  top: 20%;
   bottom: 3rem;
   z-index: 10;
-}
 
+}
 
 .carousel-item {
   height: 27rem;
@@ -63,7 +64,6 @@ div.col-md-5 img{
     font-size: 1.25rem;
     line-height: 1.4;
   }
-
   .featurette-heading {
     font-size: 50px;
   }
@@ -71,7 +71,7 @@ div.col-md-5 img{
 
 @media (min-width: 62em) {
   .featurette-heading {
-    margin-top: 7rem;
+    margin-top: rem;
   }
   .featurette-heading2 {
     margin-bottom: 5rem;
