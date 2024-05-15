@@ -1,29 +1,76 @@
-@import url('https://fonts.googleapis.com/css?family=Slabo+27px&display=swap');
-@media only screen and (min-width: 341px) {
-    body {
-        background-image: url("https://img.freepik.com/vector-gratis/elegante-fondo-blanco-lineas-brillantes_1017-17580.jpg?size=626&ext=jpg");
-        font-family: 'Slabo 27px', serif;
-        margin: 0px;
-        text-align: center;
-
+body {
+    padding-bottom: 3rem;
+    color: rgb(var(--bs-tertiary-color-rgb));
+  }
+  
+  .carousel {
+    margin-bottom: 4rem;
+    justify-content: center;
+  
+  }
+  
+  #intr{
+    color:black;
+  
+  }
+  
+  .carousel-background {
+    background-image: url('https://humanidadesab.uclm.es/humanidadesab/resources/blog/1/2019-09-24-12-11-31-00013.jpg');
+    background-size: cover;
+    background-position: center top;
+  }
+  
+  .carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+  }
+  
+  
+  .carousel-item {
+    height: 27rem;
+  }
+  
+  .marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .marketing .col-lg-4 p {
+    margin-right: .75rem;
+    margin-left: .75rem;
+  }
+  
+  .featurette-divider {
+    margin: 5rem 0;
+  }
+  
+  .featurette-heading {
+    letter-spacing: -.05rem;
+  }
+  
+  div.col-md-5 img{
+    margin-top: 15%;
+  
+  }
+  
+  @media (min-width: 40em) {
+    .carousel-caption p {
+      margin-bottom: 1.25rem;
+      font-size: 1.25rem;
+      line-height: 1.4;
     }
-
-    a {
-        text-decoration: none;
-        color: white;
-        display: inline;
-        background-color: #423A3A;
-        font-variant: small-caps;
-        font-size: 1.2em;
-        font-weight: bold;
-        padding-top: 0.25em;
-        padding-bottom: 0.25em;
-        padding-left: 1em;
-        padding-right: 1em;
-        margin: 0px;
+  
+    .featurette-heading {
+      font-size: 50px;
     }
-}
-
-@media only screen and (max-width: 340px) {
-    
-}
+  }
+  
+  @media (min-width: 62em) {
+    .featurette-heading {
+      margin-top: 7rem;
+    }
+    .featurette-heading2 {
+      margin-bottom: 5rem;
+    }
+  }
+  
