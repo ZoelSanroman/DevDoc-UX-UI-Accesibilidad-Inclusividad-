@@ -1,56 +1,50 @@
 body {
     padding-bottom: 3rem;
     color: rgb(var(--bs-tertiary-color-rgb));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
   }
   
-  .carousel {
-    margin-bottom: 4rem;
+  main {
+    flex-grow: 1; 
+    display: flex;
     justify-content: center;
-  
+    align-items: center;
+
   }
-  
-  #intr{
-    color:black;
-  
-  }
-  
-  .carousel-background {
-    background-image: url('https://humanidadesab.uclm.es/humanidadesab/resources/blog/1/2019-09-24-12-11-31-00013.jpg');
-    background-size: cover;
-    background-position: center top;
-  }
-  
-  .carousel-caption {
-    bottom: 3rem;
-    z-index: 10;
-  }
-  
-  
-  .carousel-item {
-    height: 27rem;
-  }
-  
-  .marketing .col-lg-4 {
-    margin-bottom: 1.5rem;
-    text-align: center;
-  }
-  
-  .marketing .col-lg-4 p {
-    margin-right: .75rem;
-    margin-left: .75rem;
-  }
-  
-  .featurette-divider {
-    margin: 5rem 0;
-  }
-  
-  .featurette-heading {
-    letter-spacing: -.05rem;
-  }
-  
-  div.col-md-5 img{
+
+  table {
     margin-top: 15%;
+    border-collapse: collapse;
+  }
   
+  td {
+    padding: 1%;
+  }
+  
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .first-list li {
+    font-weight: bold;
+  }
+  
+  .second-list li {
+    font-style: italic;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: left;
+    padding: 10px;
   }
   
   @media (min-width: 40em) {
