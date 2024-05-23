@@ -4,13 +4,18 @@ document.addEventListener('DOMContentLoaded', function() {
         event.preventDefault();
 
         const searchText = document.getElementById('buscador').value.toLowerCase();
-        const articles = document.querySelectorAll('.lead');
+        const articles = document.querySelectorAll('.lead, .Divergencias .lead');
         let found = false;
 
         articles.forEach(article => {
             if (article.textContent.toLowerCase().includes(searchText)) {
-                article.scrollIntoView({ behavior: 'smooth' });
-                found = true;
+                if (article.closest('.Divergencias')) {
+                    article.closest('.Divergencias').scrollIntoView({ behavior: 'smooth' });
+                    found = true;
+                } else {
+                    article.scrollIntoView({ behavior: 'smooth' });
+                    found = true;
+                }
             }
         });
 
