@@ -4,14 +4,16 @@ document.addEventListener('DOMContentLoaded', function() {
         event.preventDefault();
 
         const searchText = document.getElementById('buscador').value.toLowerCase();
-        const articles = document.querySelectorAll('.lead, .Divergencias .lead');
+        const articles = document.querySelectorAll('.lead, .Divergencias  h2.fw-normal');
         let found = false;
 
         articles.forEach(article => {
+            
             if (article.textContent.toLowerCase().includes(searchText)) {
+                console.log('Texto encontrado en el artículo:', article.textContent);
                 if (article.closest('.Divergencias')) {
                     article.closest('.Divergencias').scrollIntoView({ behavior: 'smooth' });
-                    found = true;
+                    found = true;    
                 } else {
                     article.scrollIntoView({ behavior: 'smooth' });
                     found = true;
@@ -20,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         if (!found) {
-            alert('No se encontró el artículo deseado. Puede pedirnoslo como sugerencia en contacto.');
+            alert('No se encontró el artículo deseado. Puede pedirnoslo como sugerencia, consulte: contacto.');
         }
     });
 });
