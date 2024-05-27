@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let found = false;
 
         articles.forEach(article => {
-            
+            // prueba commit git status
             if (article.textContent.toLowerCase().includes(searchText)) {
                 console.log('Texto encontrado en el artículo:', article.textContent);
                 if (article.closest('.Divergencias')) {
