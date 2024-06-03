@@ -1,6 +1,7 @@
 Pagina web sencilla que aplica las leyes de UX y UI para darle el mejor apartado visual posible, ademas de usar funciones arrow para darle funcionalidad.
 
 Detalles:
+
 La pagina se puede dividir en tres secciones: un home, main o principal deonde se encuentra toda la informacion y funcionalidades; una pagina de contacto 
 con informacion que emularia los diversos contatctos a una empresa(imaginaria), una seccion de detalle que emularia el mitico "about us" de una pagina web
 y el main/pricipal que es la pagina web en si con toda la informacion y las funcionalidades: posee una barra busqueda que busca una serie de palabras 
@@ -8,6 +9,7 @@ claves para encontrar las diferentes secciones informativas, que se encuntra en 
 un boton para cambiar los colores para pasar de modo diurno a nocturno(y viceversa).
 
 Leyes de UX:
+
 -He usado la ley de region común para separar la informacion. La pagina es de caracter didactico e informativo, por ello e juntado la informacion en
 2 grupos: el grupo de lo habitual, normal o conocido y otro grupo llamado divergencias que esta dedicado a cosas mas raras y curiosas, cada una de los 
 grupos siguen una lista con un estilo diferente. Tambien mantuve las opciones de funcionalidad de la pagina, asi como sus enlaces informativos de la misma
