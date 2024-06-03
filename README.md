@@ -6,7 +6,8 @@ La pagina se puede dividir en tres secciones: un home, main o principal deonde s
 con informacion que emularia los diversos contatctos a una empresa(imaginaria), una seccion de detalle que emularia el mitico "about us" de una pagina web
 y el main/pricipal que es la pagina web en si con toda la informacion y las funcionalidades: posee una barra busqueda que busca una serie de palabras 
 claves para encontrar las diferentes secciones informativas, que se encuntra en una barra de utilidades situada siempre en la parte superior de la pantalla y
-un boton para cambiar los colores para pasar de modo diurno a nocturno(y viceversa).
+un boton para cambiar los colores para pasar de modo diurno a nocturno(y viceversa). La pagina es accesible tanto desde ordenadores como desde telefonos
+moviles conservando toda la informacion y todas sus funciones de uno a otro. Por otro lado, su diseño es sencillo y bastante estandar para que sea intuitivo.
 
 Leyes de UX:
 
